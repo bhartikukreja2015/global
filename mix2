@@ -1,0 +1,52 @@
+<html>
+<body>
+<form action="action?check=vali" method="post">
+enter name
+<input type="text" name="name">
+<br>
+enter pass
+<input type="text" name="pass">
+<br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+
+web.xml
+
+<web-app>
+<servlet>
+<servlet-name>ActionServlet</servlet-name>
+<servlet-class>ActionServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ActionServlet</servlet-name>
+<url-pattern>/action</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>ValidateServlet</servlet-name>
+<servlet-class>ValidateServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ValidateServlet</servlet-name>
+<url-pattern>/vali</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>WelcomeServlet</servlet-name>
+<servlet-class>WelcomeServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>WelcomeServlet</servlet-name>
+<url-pattern>/wel</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>ErrorServlet</servlet-name>
+<servlet-class>ErrorServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ErrorServlet</servlet-name>
+<url-pattern>/err</url-pattern>
+</servlet-mapping>
+
+</web-app>
